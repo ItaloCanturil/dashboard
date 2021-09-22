@@ -1,4 +1,5 @@
-import { defineAsyncComponent, createRouter, createWebHistory } from 'vue-router'
+import { defineAsyncComponent } from 'vue'
+import { createRouter, createWebHistory } from 'vue-router'
 
 const Home = defineAsyncComponent({
   loader: () => import('../views/Home/index.vue')
