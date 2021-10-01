@@ -12,6 +12,7 @@
 
         <div class="flex">
           <button
+            @click="() => emit('create-acount')"
             class="
               px-6
               py-2
@@ -24,6 +25,7 @@
             Crie uma conta
           </button>
           <button
+            @click="() => emit('login')"
             class="
               px-6
               py-2
@@ -72,7 +74,9 @@
 
 <script>
 export default {
-
+  setup (_, { emit }) {
+    return { emit }
+  }
 }
 </script>
 
