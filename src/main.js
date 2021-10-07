@@ -10,5 +10,5 @@ import 'vue-toastification/dist/index.css'
 
 const app = createApp(App)
 app.use(router)
-app.user(Toast, { position: POSITION.BOTTOM_RIGHT })
+app.use(Toast, { position: POSITION.BOTTOM_RIGHT })
 app.mount('#app')

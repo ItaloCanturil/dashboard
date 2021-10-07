@@ -60,7 +60,8 @@
         }"
         class="px-8 py-3 mt-10 text-2xl font-bold text-white rounded-full bg-brand-main focus:outline-none transition-all duration-150"
       >
-        Entrar
+        <icon v-if="state.isLoading" name="loading" class="animate-spin" />
+        <span v-else>Entrar</span>
       </button>
     </form>
   </div>
@@ -74,7 +75,9 @@ import useModal from '../../hooks/useModal'
 import services from '../../services'
 import { validateEmptyAndLength3, validateEmptyAndEmail } from '../../utils/validator'
 import { useRouter } from 'vue-router'
+import Icon from '../Icon'
 export default {
+  components: { Icon },
   setup () {
     const router = useRouter()
     const modal = useModal()
