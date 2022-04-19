@@ -53,6 +53,7 @@
         </p>
         <div>
           <button
+            @click="() => emit('create-acount')"
             class="
               px-6
               py-2
